@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head lang="pl">
+    <meta charset="UTF-8" />
+    <title>Fruit Game</title>
+    <style>
+      body {
+        overflow-y: hidden;
+        background-color: #ff7f00;
+        font-family: sans-serif;
+        transition: 0.3s linear;
+      }
+
+      #points p {
+        font-size: 30px;
+        margin: 1rem 1rem 0;
+        font-weight: 800;
+        display: flex;
+        justify-content: flex-end;
+        color: rgb(92, 89, 89);
+      }
+
+      #game {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #game .fruit-box {
+        position: absolute;
+        top: calc(50% - 100px);
+        left: calc(50% - 150px);
+      }
+      .fruit-box {
+        transition: 1s linear;
+      }
+
+      .active {
+        display: grid;
+      }
+      .disable {
+        display: none;
+      }
+      .board {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 80%;
+        height: 80vh;
+      }
+      .board > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .board > div > span {
+        font-size: 2.5rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="points">
+      <p>POINTS: &nbsp; <span id="score">0</span></p>
+    </div>
+    <div id="game">
+      <img
+        class="fruit-box"
+        width="300px"
+        height="200px"
+        alt="fruit-box"
+        src="https://i.pinimg.com/originals/28/3d/2b/283d2b44e4d580269b8bd7c81ba4683e.png"
+      />
+      <div class="board"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
