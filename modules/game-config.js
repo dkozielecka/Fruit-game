@@ -1,3 +1,4 @@
+import { startGame } from "./modules/startGame.js";
 export const fruitsGame = function() {
   var fruits = ["🍏", "🍐", "🍊", "🍋", "🍓"];
 

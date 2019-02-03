@@ -1,6 +1,6 @@
-import { spawnFruits, spawnBombs } from "./modules/spawn-items";
-import { startGame } from "./modules/start-game";
-import { fruitsGame } from "./modules/game-config";
+import { spawnFruits, spawnBombs } from "./modules/spawn-items.js";
+import { startGame } from "./modules/start-game.js";
+import { fruitsGame } from "./modules/game-config.js";
 
 {
   fruitsGame();
