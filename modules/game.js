@@ -1,4 +1,4 @@
-function fruitsGame() {
+export const fruitsGame = function() {
   var fruits = ["🍏", "🍐", "🍊", "🍋", "🍓"];
 
   var backgroundColors = [
@@ -87,6 +87,4 @@ function fruitsGame() {
   }
 
   document.addEventListener("keydown", startGame);
-}
-
-fruitsGame();
+};
