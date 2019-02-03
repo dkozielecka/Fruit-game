@@ -1,8 +1,10 @@
 import { fruits, bombs, board, playerScore, game } from "./settings.js";
+import { startGame } from "./start-game.js";
+
 let playerScoreValue = document.getElementById("score").innerText;
 export const spawnFruits = function() {
+  let fruitContainer = document.createElement("div");
   if (board.children.length <= 20) {
-    let fruitContainer = document.createElement("div");
     let fruit = document.createElement("span");
     fruit.setAttribute("class", "fruit");
     fruitContainer.appendChild(fruit);
@@ -18,7 +20,11 @@ export const spawnFruits = function() {
       fruit.setAttribute("class", "disable");
     });
   } else {
+    playerScoreValue = 0;
+    playerScore.innerText = playerScoreValue;
+    board.innerHTML = "";
     window.alert(`Zdobyłeś ${playerScoreValue} na 20 pkt. Brawo!`);
+    startGame();
   }
 };
 
