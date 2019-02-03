@@ -1,5 +1,7 @@
+import { fruits, bombs, board, playerScore, game } from "./settings.js";
+let playerScoreValue = document.getElementById("score").innerText;
 export const spawnFruits = function() {
-  if (board.children.length <= 19) {
+  if (board.children.length <= 20) {
     let fruitContainer = document.createElement("div");
     let fruit = document.createElement("span");
     fruit.setAttribute("class", "fruit");
